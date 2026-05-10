@@ -22,7 +22,6 @@ def complete(
 ) -> str:
     """
     Envia o prompt ao LLM e retorna o texto da resposta completa.
-    Use esta função quando não precisar de streaming (ex: rewrite_query).
     """
     response = client.chat.completions.create(
         messages=[{"role": "user", "content": prompt}],
@@ -42,8 +41,6 @@ def complete_stream(
 ):
     """
     Envia o prompt ao LLM e retorna um generator de tokens (streaming real).
-    Use com st.write_stream() no Streamlit ou iterando manualmente.
-
     Yields:
         str: fragmento de texto à medida que o modelo o gera.
     """
