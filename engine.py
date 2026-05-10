@@ -128,9 +128,6 @@ class RAGEngine:
         Versão streaming de query(). Faz rewrite e retrieval de forma
         bloqueante, depois faz yield dos tokens do LLM à medida que chegam.
 
-        Use com st.write_stream() no Streamlit:
-            st.write_stream(rag.query_stream(user_input))
-
         Yields:
             str: fragmento de texto gerado pelo LLM.
         """
