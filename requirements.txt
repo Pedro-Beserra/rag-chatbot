@@ -1,0 +1,9 @@
+groq
+langchain-chroma
+langchain-huggingface
+langchain-core
+langchain-text-splitters
+python-dotenv
+streamlit
+markitdown[all]
+sentence-transformers
