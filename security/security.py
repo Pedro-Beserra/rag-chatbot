@@ -21,13 +21,6 @@ def sanitize_input(text: str) -> str:
        homóglifos ou sequências decompostas
     6. Collapse de espaços em branco excessivos
     7. Strip final
-
-    Nota sobre prompt injection: esta função reduz a superfície
-    de ataque (remove markup, controles e lixo Unicode), mas não
-    é uma defesa completa contra prompt injection sofisticada.
-    Para camadas adicionais, considere um guard de LLM dedicado
-    (ex: Llama Guard, Rebuff) ou detecção de padrões específicos
-    da sua aplicação.
     """
     if not isinstance(text, str) or not text:
         return ""
